@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-slide {
+            display: none;
+            animation: fade 1.5s ease-in-out;
+        }
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        .active {
+            display: block;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100">
+    <!-- 導航欄 -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">我的作品集</h1>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-gray-300">首頁</a>
+                <a href="#about" class="hover:text-gray-300">關於我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 輪播圖片 -->
+    <div class="carousel-container max-w-4xl mx-auto mt-8 mb-8">
+        <div class="carousel-slide active">
+            <img src="img1.png" alt="作品1" class="w-full">
+            <div class="text-center p-4 bg-gray-800 text-white">
+                <h3>展示 1</h3>
+                <p>這是記憶力大考驗的主題一的樣式</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="img2.png" alt="作品2" class="w-full">
+            <div class="text-center p-4 bg-gray-800 text-white">
+                <h3>展示 2</h3>
+                <p>這是記憶力大考驗的主題二的樣式</p>
+            </div>
+        </div>
+        <div class="carousel-slide">
+            <img src="img3.png" alt="作品3" class="w-full">
+            <div class="text-center p-4 bg-gray-800 text-white">
+                <h3>展示 3</h3>
+                <p>這是剪刀石頭布的遊戲的樣式</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 作品連結 -->
+    <div class="container mx-auto px-4 mb-8">
+        <h2 class="text-2xl font-bold mb-4">往期作品連結</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="game-wrapper.html?game=https://yuuu02.github.io/20241009-41041103/game.html" class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+                <h3 class="font-bold">記憶力大考驗</h3>
+                <p>點擊查看詳情</p>
+            </a>
+            <a href="game-wrapper.html?game=https://yuuu02.github.io/20240918-41041103/" class="bg-white p-4 rounded shadow hover:shadow-lg transition">
+                <h3 class="font-bold">剪刀石頭布</h3>
+                <p>點擊查看詳情</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- YouTube 影片區 -->
+    <div class="container mx-auto px-4 mb-20">
+        <h2 class="text-2xl font-bold mb-4">影片</h2>
+        <div class="grid grid-cols-1 gap-4">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CLUPkcLQm64?si=4ElWZL4Za7Er-qWX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ml78vnNTBLw?si=qfvuwGDcUCSs14GP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yZwlW5INhgk?si=boh9_YSlgEJuBLVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- 關於我頁面 -->
+    <div id="about" class="container mx-auto px-4 mb-20">
+        <h2 class="text-2xl font-bold mb-4">關於我</h2>
+        <div class="bg-white p-6 rounded shadow">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div>
+                    <h3 class="text-xl font-bold mb-2">李庭瑜</h3>
+                    <p class="mb-4">職稱：學生</p>
+                    <p class="mb-4">年齡：21歲</p>
+                    <p class="mb-4">專長：HTML, CSS, JavaScript</p>
+                    <p class="mb-4">
+                        我的興趣是寫程式和解決問題，使我有成就感。
+                    </p>
+                    <div class="space-x-4">
+                        <a href="https://github.com/yuuu02" class="text-blue-500 hover:text-blue-700">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 李庭瑜. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 輪播圖片功能
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("carousel-slide");
+            
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            
+            slides[slideIndex - 1].classList.add("active");
+            setTimeout(showSlides, 5000); // 每5秒換一張圖
+        }
+    </script>
+</body>
+</html>
